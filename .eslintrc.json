@@ -1,0 +1,9 @@
+{
+  "extends": ["airbnb", "airbnb/hooks"],
+  "rules": {
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "linebreak-style": ["error", "unix"],
+    "react/jsx-no-useless-fragment": 0
+  }
+}
