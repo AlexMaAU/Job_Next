@@ -12,13 +12,35 @@ export const metadata = {
   description: 'Created by Alex Ma',
 };
 
+const light = {
+  colors: {
+    primary: 'rgb(44, 177, 188)',
+    secondary: 'rgba(32, 126, 135, 0.8)',
+    gray: 'rgb(72, 101, 129)',
+  },
+  borderRadius: '2px',
+};
+
+const dark = {
+  colors: {
+    primary: 'rgb(0, 0, 0)',
+    secondary: 'rgba(0, 0, 0, 0.5)',
+  },
+  borderRadius: '2px',
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={inter.className}>
         {/* 把需要使用 styled-components 的组件上嵌套 StyledComponentsRegistry */}
         <StyledComponentsRegistry>
-          <ThemeProvider theme={{ color: 'rgb(44, 177, 188)' }}>{children}</ThemeProvider>
+          {/* ThemeProvider中记录所有主题相关的信息，子组件可以通过prop调用。更改theme相关内容，可以在一处修改，就近维护原则 */}
+          <ThemeProvider
+            theme={light} //切换变量便可切换主题颜色和样式
+          >
+            {children}
+          </ThemeProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
