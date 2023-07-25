@@ -15,10 +15,13 @@ export const metadata = {
 const light = {
   colors: {
     primary: 'rgb(44, 177, 188)',
-    secondary: 'rgba(32, 126, 135, 0.8)',
+    secondary: 'rgb(0, 0, 0)',
+    primary_light: '#87eaf2',
     gray: 'rgb(72, 101, 129)',
+    light_gray: 'rgb(215, 215, 215)',
+    bg_color: 'white'
   },
-  borderRadius: '2px',
+  borderRadius: '10px',
 };
 
 const dark = {
@@ -29,7 +32,7 @@ const dark = {
   borderRadius: '2px',
 };
 
-// layout.jsx 用来定义页面的基础布局，会应用到每个 page.jsx。比如定义页面的基础布局是每个页面都有 Header、Content和Footer 三部分组成。比如定义页面的主题。
+// layout.jsx 用来定义页面的基础布局，会应用到每个 page.jsx。比如定义页面的基础布局是每个页面都有 Header、Content和Footer 三部分组成。
 
 export default function RootLayout({ children }) {
   return (

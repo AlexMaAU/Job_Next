@@ -1,7 +1,6 @@
 'use client';
 
 import { Container } from './styledLanding.jsx';
-import LoginBtn from 'components/Button/Button.jsx';
 import Navigate from 'components/Navigation/Navigation.jsx';
 import Logo from 'components/Logo/Logo.jsx';
 import HeroContainer from 'components/HeroContainer/HeroContainer.jsx';
