@@ -29,6 +29,8 @@ const dark = {
   borderRadius: '2px',
 };
 
+// layout.jsx 用来定义页面的基础布局，会应用到每个 page.jsx。比如定义页面的基础布局是每个页面都有 Header、Content和Footer 三部分组成。比如定义页面的主题。
+
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
