@@ -6,7 +6,7 @@ export default function Home() {
   // 页面跳转逻辑
   const user = undefined;
   if (user === undefined) {
-    RedirectTemplate('register');
+    RedirectTemplate('landing');
   }
 
   return <div>Home Page</div>;
