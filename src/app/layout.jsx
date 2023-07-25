@@ -4,6 +4,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from 'styled-components';
 import StyledComponentsRegistry from '../app/registry';
+import { AppProvider } from '../context/appContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,7 +20,7 @@ const light = {
     primary_light: '#87eaf2',
     gray: 'rgb(72, 101, 129)',
     light_gray: 'rgb(215, 215, 215)',
-    bg_color: 'white'
+    bg_color: 'white',
   },
   borderRadius: '10px',
 };
@@ -44,7 +45,8 @@ export default function RootLayout({ children }) {
           <ThemeProvider
             theme={light} //切换变量便可切换主题颜色和样式
           >
-            {children}
+            <AppProvider>{children}</AppProvider>
+            {/* {children} */}
           </ThemeProvider>
         </StyledComponentsRegistry>
       </body>

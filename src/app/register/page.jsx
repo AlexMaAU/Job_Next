@@ -4,17 +4,12 @@ import { Container } from './styledPage';
 import Logo from 'components/Logo/Logo';
 import Card from 'components/Card/Card';
 import Form from 'components/Form/Form';
-
-// const handleOnSubmit = (event) => {
-//   event.preventDefault();
-//   console.log('Form submitted');
-// };
-
-// const handleOnChange = (event) => {
-//   console.log(event.target.value);
-// };
+import { useAppContext } from 'context/appContext';
 
 const Register = () => {
+  const { user } = useAppContext();
+  console.log(user);
+
   return (
     <Container>
       <Card>
