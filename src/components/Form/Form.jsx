@@ -17,7 +17,7 @@ const Form = () => {
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    console.log('Form submitted');
+    console.log(name, email, password);
   };
 
   const handleNameChange = (event) => {
