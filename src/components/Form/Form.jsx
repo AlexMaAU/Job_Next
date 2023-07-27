@@ -42,8 +42,8 @@ const Form = () => {
         <>
           <FormTitle>Login</FormTitle>
           <FormInputRow
-            name='name'
-            type='text'
+            name='email'
+            type='email'
             handleOnChange={handleNameChange}
           />
           <FormInputRow
