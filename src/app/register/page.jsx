@@ -7,7 +7,8 @@ import Form from 'components/Form/Form';
 import { useAppContext } from 'context/appContext';
 
 const Register = () => {
-  const { user } = useAppContext();
+  const { state } = useAppContext();
+  const user = state.user;
   console.log(user);
 
   return (

@@ -6,22 +6,71 @@ import {
   StyledButton as Button,
   ToggleText,
 } from './styledForm.jsx';
+import axios from 'axios';
+// import reducer from '../../context/reducer';
+import { useAppContext } from '../../context/appContext';
+import { addUserToLocalStorage } from '../../context/utils';
+import { useRouter } from 'next/navigation'
+
 
 const Form = () => {
+  const router = useRouter();
   const [isLogin, setIsLogin] = useState(true);
-  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  console.log(name, email, password);
+  const { dispatch } = useAppContext();
 
-  const handleOnSubmit = (event) => {
+  const handleOnSubmit = async (event) => {
+    
     event.preventDefault();
-    console.log(name, email, password);
+
+    if (!email || !password) {
+      alert('Please fill out fields');
+      return;
+    }
+
+    try {
+      if (isLogin) {
+        const data = await axios.post(
+          'http://127.0.0.1:5000/api/v1/users/login',
+          { email, password }
+        );
+        const { user, token } = data.data;
+        alert('Login Success');
+        dispatch({
+          type: 'SETUP_USER_SUCCESS',
+          payload: user,
+        });
+        addUserToLocalStorage({ user, token });
+        router.push('/dashboard');
+      } else {
+        const data = await axios.post(
+          'http://127.0.0.1:5000/api/v1/users/register',
+          { username, email, password }
+        );
+        const { newUser, token } = data.data;
+        alert('Register Success');
+        dispatch({
+          type: 'SETUP_USER_SUCCESS',
+          payload: newUser,
+        });
+        addUserToLocalStorage({ newUser, token });
+        router.push('/dashboard');
+      }
+    } catch (error) {
+      console.log(error);
+      dispatch({
+        type: 'SETUP_USER_ERROR',
+        payload: { msg: error.message },
+      });
+    }
+    // console.log(username, email, password);
   };
 
   const handleNameChange = (event) => {
-    setName(event.target.value);
+    setUsername(event.target.value);
   };
 
   const handleEmailChange = (event) => {
@@ -44,11 +93,13 @@ const Form = () => {
           <FormInputRow
             name='email'
             type='email'
-            handleOnChange={handleNameChange}
+            value={email}
+            handleOnChange={handleEmailChange}
           />
           <FormInputRow
             name='password'
             type='password'
+            value={password}
             handleOnChange={handlePasswordChange}
           />
           <Button type='submit'>Login</Button>
@@ -63,16 +114,19 @@ const Form = () => {
           <FormInputRow
             name='name'
             type='text'
+            value={name}
             handleOnChange={handleNameChange}
           />
           <FormInputRow
             name='email'
             type='email'
+            value={email}
             handleOnChange={handleEmailChange}
           />
           <FormInputRow
             name='password'
             type='password'
+            value={password}
             handleOnChange={handlePasswordChange}
           />
           <Button type='submit'>Signup</Button>
