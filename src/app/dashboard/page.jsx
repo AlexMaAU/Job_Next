@@ -5,8 +5,6 @@ import { useAppContext } from 'context/appContext';
 
 const DashboardPage = () => {
   const { state } = useAppContext();
-  console.log(state);
-
   const user = state.user;
 
   if (user === undefined) {
@@ -15,7 +13,7 @@ const DashboardPage = () => {
 
   return (
     <>
-      <h1>Dashboard</h1>
+      <h1>Dashboard Page</h1>
     </>
   );
 };
