@@ -21,6 +21,8 @@ const light = {
     gray: 'rgb(72, 101, 129)',
     light_gray: 'rgb(215, 215, 215)',
     bg_color: 'white',
+    white: '#fff',
+    lightGray: 'rgba(0, 0, 0, 0.1)',
   },
   borderRadius: '10px',
 };

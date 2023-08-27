@@ -10,8 +10,7 @@ import axios from 'axios';
 // import reducer from '../../context/reducer';
 import { useAppContext } from '../../context/appContext';
 import { addUserToLocalStorage } from '../../context/utils';
-import { useRouter } from 'next/navigation'
-
+import { useRouter } from 'next/navigation';
 
 const Form = () => {
   const router = useRouter();
@@ -23,7 +22,6 @@ const Form = () => {
   const { dispatch } = useAppContext();
 
   const handleOnSubmit = async (event) => {
-    
     event.preventDefault();
 
     if (!email || !password) {

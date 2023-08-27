@@ -1,15 +1,15 @@
 'use client';
 
-import RedirectTemplate from 'components/RedirectTemplate/RedirectTemplate';
+// import RedirectTemplate from 'components/RedirectTemplate/RedirectTemplate';
 import { useAppContext } from 'context/appContext';
 
 const DashboardPage = () => {
   const { state } = useAppContext();
-  const user = state.user;
+  const user = state.user; 
 
-  if (user === undefined) {
-    RedirectTemplate('register');
-  }
+  // if (user === undefined) {
+  //   RedirectTemplate('register');
+  // }
 
   return (
     <>

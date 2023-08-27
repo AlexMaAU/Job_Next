@@ -11,4 +11,5 @@ export const Container = styled.div`
 export const FormTitle = styled.h2`
   font-size: 28px;
   margin-top: 25px;
+  margin-bottom: 20px;
 `;

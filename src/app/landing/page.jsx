@@ -1,7 +1,7 @@
 'use client';
 
-import { Container } from './styledLanding.jsx';
-import Navigate from 'components/Navigation/Navigation.jsx';
+import { Container, Navigation } from './styledLanding.jsx';
+// import Navigate from 'components/Navigation/Navigation.jsx';
 import Logo from 'components/Logo/Logo.jsx';
 import HeroContainer from 'components/HeroContainer/HeroContainer.jsx';
 import HeroText from 'components/HeroText/HeroText.jsx';
@@ -17,10 +17,10 @@ function LandingPage() {
         <Image width='164' height='50' alt='logo' src='./image/logo.svg' />
       </Navigation>
       */}
-      <Navigate>
+      <Navigation>
         {/* 把Logo组件写在page.jsx里，作为 children 传入的优点是增加可读性，只看 page.jsx 的结构就能知道页面的组成 */}
         <Logo />
-      </Navigate>
+      </Navigation>
       {/* <HeroContainer className='hero'>
         <HeroText className='info'>
           <Title>

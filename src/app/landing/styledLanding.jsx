@@ -8,6 +8,13 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
+export const Navigation = styled.nav`
+  height: 96px; //header高度固定
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+`;
+
 // export const Navigation = styled.nav`
 //   height: 96px; //header高度固定
 //   display: flex;

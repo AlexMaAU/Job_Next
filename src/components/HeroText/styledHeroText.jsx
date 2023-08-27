@@ -28,7 +28,9 @@ export const Title = styled.h1`
 export const Description = styled.p`
   color: ${(prop) => prop.theme.colors.gray};
   margin-top: 24px;
+  margin-bottom: 40px;
 
   @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
   }
 `;
