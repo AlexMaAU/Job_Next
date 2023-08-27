@@ -7,11 +7,13 @@ import {
 } from './layout.styles';
 import Navigation from '../../components/Navigation/Navigation';
 import Drawer from 'components/Drawer/Drawer';
+import Logo from '../../components/Logo/Logo';
 
 const DashboardLayout = ({ children }) => {
   return (
     <LayoutContainer>
       <DrawerContainer isOpen>
+        <Logo />
         <Drawer />
       </DrawerContainer>
       <MainContainer>
