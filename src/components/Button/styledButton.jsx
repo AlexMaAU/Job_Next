@@ -20,6 +20,7 @@ export const StyledButton = styled.button`
 
   @media screen and (max-width: 768px) {
     /* margin-top: 60px; */
+    padding: 10px 20px;
   }
 
   /* 如果按钮的样式一样，只是背景颜色不同，可以通过传入一个props来进行颜色的切换 */

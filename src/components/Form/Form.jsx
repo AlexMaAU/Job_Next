@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FormTitle } from '../../app/register/styledPage';
+import { FormTitle } from '../../app/register/styledRegister';
 import FormInputRow from 'components/FormInputRow/FormInputRow';
 import {
   FormContainer,
@@ -42,7 +42,7 @@ const Form = () => {
           payload: user,
         });
         addUserToLocalStorage({ user, token });
-        router.push('/dashboard');
+        router.push('/dashboard/add');
       } else {
         const data = await axios.post(
           'http://127.0.0.1:5000/api/v1/users/register',
@@ -55,7 +55,7 @@ const Form = () => {
           payload: newUser,
         });
         addUserToLocalStorage({ newUser, token });
-        router.push('/dashboard');
+        router.push('/dashboard/add');
       }
     } catch (error) {
       console.log(error);

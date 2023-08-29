@@ -19,6 +19,7 @@ const light = {
     secondary: 'rgb(0, 0, 0)',
     primary_light: '#87eaf2',
     gray: 'rgb(72, 101, 129)',
+    gray100: '#f8fafc',
     light_gray: 'rgb(215, 215, 215)',
     bg_color: 'white',
     white: '#fff',

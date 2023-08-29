@@ -2,20 +2,18 @@
 
 // import RedirectTemplate from 'components/RedirectTemplate/RedirectTemplate';
 import { useAppContext } from 'context/appContext';
+import { useRouter } from 'next/navigation';
 
 const DashboardPage = () => {
-  const { state } = useAppContext();
-  const user = state.user; 
-
-  // if (user === undefined) {
+  // const { user } = useAppContext();
+  // const router = useRouter();
+  // if (user !== undefined) {
   //   RedirectTemplate('register');
+  // } else {
+  //   router.push('/dashboard/add');
   // }
 
-  return (
-    <>
-      <h1>Dashboard Page</h1>
-    </>
-  );
+  return <></>;
 };
 
 export default DashboardPage;

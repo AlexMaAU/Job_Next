@@ -1,6 +1,8 @@
 'use client';
 
 import RedirectTemplate from '../components/RedirectTemplate/RedirectTemplate';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 export default function Home() {
   // 页面跳转逻辑
@@ -9,5 +11,17 @@ export default function Home() {
     RedirectTemplate('landing');
   }
 
-  return <div>Home Page</div>;
+  return (
+    <Box
+      sx={{
+        display: 'flex',
+        height: '100vh',
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <CircularProgress />
+    </Box>
+  );
 }

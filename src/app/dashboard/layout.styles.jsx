@@ -19,4 +19,11 @@ export const MainContainer = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+`;
+
+export const DashboardContainer = styled.div`
+  /* padding: 24px 32px; */
 `;
