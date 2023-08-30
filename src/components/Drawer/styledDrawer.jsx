@@ -14,6 +14,15 @@ export const NavLink = styled.a`
   align-items: center;
   transition: all 0.5s ease;
 
+  ${(props) =>
+    props.isSelected &&
+    `
+      color: ${props.theme.colors.primary};
+      svg {
+        color: ${props.theme.colors.primary};
+      }
+  `}
+
   &:hover {
     transform: translateX(12px);
     color: ${({ theme }) => theme.colors.primary};

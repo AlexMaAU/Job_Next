@@ -7,7 +7,10 @@ import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { getTokenFromLocalStorage } from '../../../context/utils';
 import axios from 'axios';
+
+const token = getTokenFromLocalStorage();
 
 const AddPage = () => {
   const [formValues, setFormValues] = useState({
@@ -35,7 +38,9 @@ const AddPage = () => {
       return;
     }
     axios
-      .post('http://127.0.0.1:5000/api/v1/jobs/', formValues)
+      .post('http://127.0.0.1:5000/api/v1/jobs/', formValues, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       .then(() => router.push('/dashboard/all'))
       .catch((err) => console.log(err));
   };
@@ -61,7 +66,7 @@ const AddPage = () => {
             marginTop: '60px',
             marginLeft: '20%',
             marginRight: '20%',
-            '@media (min-wdith: 768px)': {
+            '@media (max-width: 768px)': {
               flexDirection: 'column',
               marginLeft: '0',
               marginRight: '0',
@@ -108,7 +113,7 @@ const AddPage = () => {
               variant='outlined'
               type='text'
               name='status'
-              value='interview'
+              value={formValues.status}
               sx={{ width: '320px', marginTop: '5px' }}
               onChange={handleOnChange}
             >
@@ -124,7 +129,7 @@ const AddPage = () => {
               variant='outlined'
               type='text'
               name='jobType'
-              value='full-time'
+              value={formValues.jobType}
               sx={{ width: '320px', marginTop: '5px' }}
               onChange={handleOnChange}
             >

@@ -9,7 +9,7 @@ const NavigationComponent = () => {
   return (
     <Navigation>
       <DrawerToggleButton onClick={toggleDrawer}>
-        <Image src='/image/fold.svg' width={32} height={32} />
+        <Image src='/image/fold.svg' width={32} height={32} alt='fold icon' />
       </DrawerToggleButton>
       <NavTitle>Dashboard</NavTitle>
       <Button startIcon='/image/profile.svg' endIcon='/image/downChevron.svg'>

@@ -8,6 +8,7 @@ const Button = ({ className, children, primary_light, startIcon, endIcon }) => {
     <StyledButton primary_light={primary_light} className={className}>
       {startIcon && (
         <Image
+          alt='Start Icon'
           src={startIcon}
           width={20}
           height={20}
@@ -17,6 +18,7 @@ const Button = ({ className, children, primary_light, startIcon, endIcon }) => {
       {children}
       {endIcon && (
         <Image
+          alt='End Icon'
           src={endIcon}
           width={18}
           height={18}
