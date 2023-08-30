@@ -4,11 +4,17 @@ const addUserToLocalStorage = ({ user, token }) => {
 };
 
 const getTokenFromLocalStorage = () => {
-  return localStorage.getItem('token');
+  const token = localStorage.getItem('token');
+  return token;
 };
 
 const getUserFromLocalStorage = () => {
-  return localStorage.getItem('user');
+  const user = localStorage.getItem('user');
+  return user;
 };
 
-export { addUserToLocalStorage, getTokenFromLocalStorage, getUserFromLocalStorage };
+export {
+  addUserToLocalStorage,
+  getTokenFromLocalStorage,
+  getUserFromLocalStorage,
+};
