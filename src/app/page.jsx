@@ -9,10 +9,10 @@ import HeroImg from 'components/HeroImg/HeroImg.jsx';
 
 export default function Home() {
   // 页面跳转逻辑
-  const user = undefined;
-  if (user === undefined) {
-    RedirectTemplate('landing');
-  }
+  // const user = undefined;
+  // if (user === undefined) {
+  //   RedirectTemplate('landing');
+  // }
 
   return (
     <Container>
