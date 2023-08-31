@@ -1,11 +1,11 @@
 'use client';
 
+import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import Link from 'next/link';
-import startBtn from '../../public/image/startBtn.png';
-import Image from 'next/image';
+import RedirectTemplate from 'components/RedirectTemplate/RedirectTemplate';
 
 export default function Home() {
+  RedirectTemplate('landing');
   return (
     <Box
       sx={{
@@ -16,9 +16,7 @@ export default function Home() {
         alignItems: 'center',
       }}
     >
-      <Link href='/landing'>
-        <Image src={startBtn} alt='Click To Start' width={300} height={120} />
-      </Link>
+      <CircularProgress />
     </Box>
   );
 }
