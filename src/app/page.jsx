@@ -2,7 +2,8 @@
 
 import Box from '@mui/material/Box';
 import Link from 'next/link';
-import Button from 'components/Button/Button';
+import startBtn from '../../public/image/startBtn.png';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       }}
     >
       <Link href='/landing'>
-        <Button primary_light={false}>Start</Button>
+        <Image src={startBtn} alt='Click To Start' width={300} height={120} />
       </Link>
     </Box>
   );
