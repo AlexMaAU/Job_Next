@@ -38,7 +38,7 @@ const AddPage = () => {
       return;
     }
     axios
-      .post('http://127.0.0.1:5000/api/v1/jobs/', formValues, {
+      .post('https://jobnextapi-nqeo-dev.fl0.io/api/v1/jobs/', formValues, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => router.push('/dashboard/all'))

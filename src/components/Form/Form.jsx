@@ -32,7 +32,7 @@ const Form = () => {
     try {
       if (isLogin) {
         const data = await axios.post(
-          'http://127.0.0.1:5000/api/v1/users/login',
+          'https://jobnextapi-nqeo-dev.fl0.io/api/v1/users/login',
           { email, password }
         );
         const { user, token } = data.data;
@@ -45,7 +45,7 @@ const Form = () => {
         router.push('/dashboard/add');
       } else {
         const data = await axios.post(
-          'http://127.0.0.1:5000/api/v1/users/register',
+          'https://jobnextapi-nqeo-dev.fl0.io/api/v1/users/register',
           { username, email, password }
         );
         const { newUser, token } = data.data;

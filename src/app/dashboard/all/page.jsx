@@ -19,7 +19,7 @@ const AllPage = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios.get('http://127.0.0.1:5000/api/v1/jobs/all', {
+        const res = await axios.get('https://jobnextapi-nqeo-dev.fl0.io/api/v1/jobs/all', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
