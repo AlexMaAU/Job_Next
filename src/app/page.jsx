@@ -1,5 +1,6 @@
 'use client';
 
+import RedirectTemplate from '../components/RedirectTemplate/RedirectTemplate';
 import { Container, Navigation } from './styledLanding.jsx';
 import Logo from 'components/Logo/Logo.jsx';
 import HeroContainer from 'components/HeroContainer/HeroContainer.jsx';
@@ -8,10 +9,10 @@ import HeroImg from 'components/HeroImg/HeroImg.jsx';
 
 export default function Home() {
   // 页面跳转逻辑
-  // const user = undefined;
-  // if (user === undefined) {
-  //   RedirectTemplate('landing');
-  // }
+  const user = undefined;
+  if (user === undefined) {
+    RedirectTemplate('register');
+  }
 
   return (
     <Container>
