@@ -1,8 +1,8 @@
 'use client';
 
 // import RedirectTemplate from 'components/RedirectTemplate/RedirectTemplate';
-import { useAppContext } from 'context/appContext';
-import { useRouter } from 'next/navigation';
+// import { useAppContext } from 'context/appContext';
+// import { useRouter } from 'next/navigation';
 
 const DashboardPage = () => {
   // const { user } = useAppContext();
