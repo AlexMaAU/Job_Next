@@ -1,11 +1,27 @@
 'use client';
 
 // import RedirectTemplate from '../components/RedirectTemplate/RedirectTemplate';
-import { Container, Navigation } from './styledLanding.jsx';
+// import { Container, Navigation } from './styledLanding.jsx';
 import Logo from 'components/Logo/Logo.jsx';
 import HeroContainer from 'components/HeroContainer/HeroContainer.jsx';
 import HeroText from 'components/HeroText/HeroText.jsx';
 import HeroImg from 'components/HeroImg/HeroImg.jsx';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Navigation = styled.nav`
+  height: 96px; //header高度固定
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+`;
 
 export default function Home() {
   // 页面跳转逻辑
