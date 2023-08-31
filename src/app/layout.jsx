@@ -8,11 +8,6 @@ import { AppProvider } from '../context/appContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
-  title: 'Job Next App',
-  description: 'Created by Alex Ma',
-};
-
 const light = {
   colors: {
     primary: 'rgb(44, 177, 188)',
