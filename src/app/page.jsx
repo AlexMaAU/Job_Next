@@ -1,6 +1,6 @@
 'use client';
 
-import RedirectTemplate from '../components/RedirectTemplate/RedirectTemplate';
+// import RedirectTemplate from '../components/RedirectTemplate/RedirectTemplate';
 import { Container, Navigation } from './styledLanding.jsx';
 import Logo from 'components/Logo/Logo.jsx';
 import HeroContainer from 'components/HeroContainer/HeroContainer.jsx';
@@ -27,25 +27,6 @@ export default function Home() {
         {/* 把Logo组件写在page.jsx里，作为 children 传入的优点是增加可读性，只看 page.jsx 的结构就能知道页面的组成 */}
         <Logo />
       </Navigation>
-      {/* <HeroContainer className='hero'>
-        <HeroText className='info'>
-          <Title>
-            Job
-            <span>Tracking</span>
-            App
-          </Title>
-          <Description>
-            Im baby wayfarers hoodie next level taiyaki brooklyn cliche blue
-            bottle single-origin coffee chia. Aesthetic post-ironic venmo,
-            quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
-            narwhal.
-          </Description>
-          <LoginBtn>Login/Register</LoginBtn>
-        </HeroText>
-        <HeroImg>
-          <Image width='400' height='352' src='./image/hero.svg' />
-        </HeroImg>
-      </HeroContainer> */}
       <HeroContainer>
         <HeroText />
         <HeroImg />
